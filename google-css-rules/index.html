@@ -45,30 +45,48 @@
         <label for="checkbox4">Unchecked, colored</label>
     </div>
 
-    <h2>Select Menus</h2>
-    <div class="block form-group">
-        <label for="select">Select</label>
-        <select id="select">
-            <option selected>Google Docs</option>
-            <option>Google Forms</option>
-            <option>Google Sheets</option>
-        </select>
-    </div>
-    <div class="block form-group">
-        <label for="disabled-select">Disabled select</label>
-        <select id="disabled-select" disabled>
-            <option selected>Google Docs</option>
-            <option>Google Forms</option>
-            <option>Google Sheets</option>
-        </select>
-    </div>
-
     <h2>Add and Remove buttons</h2>
     <button class="add"></button>
+    <br>
     <button class="sub"></button>
 
-    <h2>Short Text Boxes</h2>
-    <input type="text" placeholder="9:00">
+    <h2>Select Menu</h2>
+    <label for="select">Timezone</label>
+    <select id="select">
+        <option>UTC-13</option>
+        <option>UTC-12</option>
+        <option>UTC-11.5</option>
+        <option>UTC-10</option>
+        <option>UTC-9</option>
+        <option>UTC-8</option>
+        <option>UTC-7</option>
+        <option>UTC-6</option>
+        <option>UTC-5</option>
+    </select>
+
+    <h2>Small text box</h2>
+    <span class="small-wrapper"><input type="text" class="small" value="9:00"></span>
+    -
+    <span class="small-wrapper"><input type="text" class="small" value="5:00"></span>
+
+
+    <h2>Weekday</h2>
+    <div class="weekdays">
+        <input type="checkbox" class="weekday">
+        <input type="checkbox" class="weekday" checked>
+        <input type="checkbox" class="weekday">
+        <input type="checkbox" class="weekday" checked>
+        <input type="checkbox" class="weekday">
+        <input type="checkbox" class="weekday" checked>
+        <input type="checkbox" class="weekday">
+        <span class="label">s</span>
+        <span class="label">m</span>
+        <span class="label">t</span>
+        <span class="label">w</span>
+        <span class="label">t</span>
+        <span class="label">f</span>
+        <span class="label">s</span>
+    </div>
 </body>
 
 </html>
