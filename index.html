@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Document</title>
     <style>
       /* THE FOLLOWING RULES ARE SIMPLY TO REPLICATE A SIMILAR ENVIRONMENT TO THE GOOGLE PLUGIN */
@@ -30,7 +31,35 @@
 
   <body>
     <div class="wrapper">
-      <h1>JetLagJelly</h1>
+      <header>
+        <h1 style="text-align: center;">Find a Meeting</h1>
+        <a href="configUI.html" style="float: right;"><button><i class="fas fa-cog"></i></button></a>
+      </header>
+      <main>
+  
+          <div id="length">
+              <label for="meeting-length">Meeting length:</label>
+              <select id="meeting-length" name="meeting-length">
+                  <option value="" selected disabled>Select meeting time</option>
+                  <option value="15">15 minutes</option>
+                  <option value="30">30 minutes</option>
+                  <option value="45">45 minutes</option>
+                  <option value="60">60 minutes</option>
+                  <option value="75">75 minutes</option>
+                  <option value="90">90 minutes</option>
+                  <option value="custom">Custom..</option>
+              </select>
+          </div>
+        
+        <br><br>
+        
+        <label for="participant-emails">Participant email addresses:</label>
+        <input type="text" id="participant-emails" name="participant-emails">
+        
+        <br><br>
+        
+        <button type="submit" id="find-meeting">Find a Meeting</button>
+      </main>
     </div>
   </body>
 </html>
