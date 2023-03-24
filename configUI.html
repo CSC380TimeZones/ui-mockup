@@ -1,233 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Config UI</title>
-    <link rel="stylesheet" href="./google-css-rules/style.css">
+    <link rel="stylesheet" href="./google-css-rules/style.css" />
     <style>
-        /* THE FOLLOWING RULES ARE SIMPLY TO REPLICATE A SIMILAR ENVIRONMENT TO THE GOOGLE PLUGIN */
-          body {
-            background-color: #edf5f6;
-            font-family: "Poppins", sans-serif;
-          }
-          .wrapper {
-            margin: auto;
-            width: 300px;
-            padding: 5px;
-            background-color: white;
-            box-shadow: 0 0 5px black;
-          }
+      /* THE FOLLOWING RULES ARE SIMPLY TO REPLICATE A SIMILAR ENVIRONMENT TO THE GOOGLE PLUGIN */
+      body {
+        background-color: #edf5f6;
+        font-family: "Poppins", sans-serif;
+      }
+      .wrapper {
+        margin: auto;
+        width: 300px;
+        padding: 5px;
+        background-color: white;
+        box-shadow: 0 0 5px black;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
+      <header style="text-align: center">
+        <h1>Meeting Configuration</h1>
+        <label for="time-zone">Timezone: </label>
+        <select id="time-zone" name="time-zone">
+          <option value="" selected disabled>Select time zone:</option>
+          <option value="GMT">GMT</option>
+          <option value="GMT+1:00">GMT+1:00</option>
+          <option value="GMT+2:00">GMT+2:00</option>
+          <option value="GMT+3:00">GMT+3:00</option>
+          <option value="GMT+3:30">GMT+3:30</option>
+          <option value="GMT+4:00">GMT+4:00</option>
+          <option value="GMT+5:00">GMT+5:00</option>
+          <option value="GMT+5:30">GMT+5:30</option>
+          <option value="GMT+7:00">GMT+7:00</option>
+          <option value="GMT+8:00">GMT+8:00</option>
+          <option value="GMT+9:00">GMT+9:00</option>
+          <option value="GMT+9:30">GMT+9:30</option>
+          <option value="GMT+10:00">GMT+10:00</option>
+          <option value="GMT+11:00">GMT+11:00</option>
+          <option value="GMT+12:00">GMT+12:00</option>
+          <option value="GMT-11:00">GMT-11:00</option>
+          <option value="GMT-10:00">GMT-10:00</option>
+          <option value="GMT-9:00">GMT-9:00</option>
+          <option value="GMT-8:00">GMT-8:00</option>
+          <option value="GMT-7:00">GMT-7:00</option>
+          <option value="GMT-6:00">GMT-6:00</option>
+          <option value="GMT-5:00">GMT-5:00</option>
+          <option value="GMT-4:00">GMT-4:00</option>
+          <option value="GMT-3:30">GMT-3:30</option>
+          <option value="GMT-3:00">GMT-3:00</option>
+          <option value="GMT-1:00">GMT-1:00</option>
+        </select>
+        <a href="index.html" style="float: right"
+          ><button class="blue"><i class="fas fa-home"></i></button
+        ></a>
+      </header>
 
-        <header style="text-align: center;">
-            <h1 >Meeting Configuration</h1>
-            <label for="time-zone">TimeZone: </label>
-            <select id="time-zone" name="time-zone">
-                <option value="" selected disabled>Select time zone: </option>
-                <option value="GMT">GMT</option>
-                <option value="GMT+1:00">GMT+1:00</option>
-                <option value="GMT+2:00">GMT+2:00</option>
-                <option value="GMT+3:00">GMT+3:00</option>
-                <option value="GMT+3:30">GMT+3:30</option>
-                <option value="GMT+4:00">GMT+4:00</option>
-                <option value="GMT+5:00">GMT+5:00</option>
-                <option value="GMT+5:30">GMT+5:30</option>
-                <option value="GMT+7:00">GMT+7:00</option>
-                <option value="GMT+8:00">GMT+8:00</option>
-                <option value="GMT+9:00">GMT+9:00</option>
-                <option value="GMT+9:30">GMT+9:30</option>
-                <option value="GMT+10:00">GMT+10:00</option>
-                <option value="GMT+11:00">GMT+11:00</option>
-                <option value="GMT+12:00">GMT+12:00</option>
-                <option value="GMT-11:00">GMT-11:00</option>
-                <option value="GMT-10:00">GMT-10:00</option>
-                <option value="GMT-9:00">GMT-9:00</option>
-                <option value="GMT-8:00">GMT-8:00</option>
-                <option value="GMT-7:00">GMT-7:00</option>
-                <option value="GMT-6:00">GMT-6:00</option>
-                <option value="GMT-5:00">GMT-5:00</option>
-                <option value="GMT-4:00">GMT-4:00</option>
-                <option value="GMT-3:30">GMT-3:30</option>
-                <option value="GMT-3:00">GMT-3:00</option>
-                <option value="GMT-1:00">GMT-1:00</option>
-            </select>
-            <a href="index.html" style="float: right;"><button><i class="fas fa-home"></i></button></a>
-        </header>
-        
-        <main>
-            
-            <div id="optimal-availabilities">
-                <label for="add-optimal-availability-slot">Preferred Times: </label>
-                <button type="submit" id="add-optimal-availability-slot">+</button>
-                <br>
-                <br>
-                
-                <div id = "optimal-timeslot">
-                    <button type="submit" id="remove-optimal-availability-slot">-</button>
-                    <label for="start-time">From:</label>
-                    <input type="time" id="start-time" name="start-time">
-                    <label for="end-time">To:</label>
-                    <input type="time" id="end-time" name="end-time">
-                    <br>
-                    <label for="weekdays">Days:</label> 
-                    <div class="weekdays">
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <span class="label">s</span>
-                        <span class="label">m</span>
-                        <span class="label">t</span>
-                        <span class="label">w</span>
-                        <span class="label">t</span>
-                        <span class="label">f</span>
-                        <span class="label">s</span>
-                    </div>
-                    <!-- <div id="weekdays" style="display:inline">
-                        <label for="monday">M</label>
-                        <input type="radio" id="monday" name="day-of-week" value="monday">
-                        
-                        <label for="tuesday">Tu</label>
-                        <input type="radio" id="tuesday" name="day-of-week" value="tuesday">
-                        
-                        <label for="wednesday">W</label>
-                        <input type="radio" id="wednesday" name="day-of-week" value="wednesday">
-                        
-                        <label for="thursday">Th</label>
-                        <input type="radio" id="thursday" name="day-of-week" value="thursday">
-                        
-                        <label for="friday">F</label>
-                        <input type="radio" id="friday" name="day-of-week" value="friday">
-                        
-                        <label for="saturday">Sat</label>
-                        <input type="radio" id="saturday" name="day-of-week" value="saturday">
-                        
-                        <label for="sunday">Sun</label>
-                        <input type="radio" id="sunday" name="day-of-week" value="sunday">
-                    </div> -->
-                </div>
-                
-                <br> 
-                
-                
-                <div id = "optimal-timeslot">
-                    <button type="submit" id="remove-optimal-availability-slot">-</button>
-                    <label for="start-time">From:</label>
-                    <input type="time" id="start-time" name="start-time">
-                    <label for="end-time">To:</label>
-                    <input type="time" id="end-time" name="end-time">
-                    <br>
-                    <label for="weekdays">Days:</label>
-                    <div class="weekdays">
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <span class="label">s</span>
-                        <span class="label">m</span>
-                        <span class="label">t</span>
-                        <span class="label">w</span>
-                        <span class="label">t</span>
-                        <span class="label">f</span>
-                        <span class="label">s</span>
-                    </div>
-                </div>
+      <main>
+        <div id="optimal-availabilities">
+          <h2>
+            Preferred Times:<button
+              class="add"
+              id="add-optimal-availability-slot"
+            >
+              +
+            </button>
+          </h2>
+
+          <div class="timeslot">
+            <button class="sub" id="remove-optimal-availability-slot">-</button>
+            <div class="time-range">
+              <input
+                type="text"
+                class="small"
+                id="start-time"
+                name="start-time"
+                value="9:00"
+              />
+              -
+              <input
+                type="text"
+                class="small"
+                id="end-time"
+                name="end-time"
+                value="5:00"
+              />
             </div>
-            
-            <br>
-            <br>
-            <br>
-            
-            <div id="suboptimal-availabilities">
-                <label for="add-suboptimal-availability-slot"> Suboptimal Times: </label>
-                <button type="submit" id="add-suboptimal-availability-slot">+</button>
-                <br>
-                <br>
-                
-                <div id = "suboptimal-timeslot">
-                    <button type="submit" id="remove-suboptimal-availability-slot">-</button>
-                    <label for="start-time">From:</label>
-                    <input type="time" id="start-time" name="start-time">
-                    <label for="end-time">To:</label>
-                    <input type="time" id="end-time" name="end-time">
-                    <br>
-                    <label for="days-of-week">Days:</label> 
-                    <div class="weekdays">
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <span class="label">s</span>
-                        <span class="label">m</span>
-                        <span class="label">t</span>
-                        <span class="label">w</span>
-                        <span class="label">t</span>
-                        <span class="label">f</span>
-                        <span class="label">s</span>
-                    </div>
-                </div>
-                
-                <br> 
-                
-                <div id = "suboptimal-timeslot">
-                    <button type="submit" id="remove-suboptimal-availability-slot">-</button>
-                    <label for="start-time">From:</label>
-                    <input type="time" id="start-time" name="start-time">
-                    <label for="end-time">To:</label>
-                    <input type="time" id="end-time" name="end-time">
-                    <br>
-                    <label for="days-of-week">Days:</label> 
-                    <div class="weekdays">
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <input type="checkbox" class="weekday" checked>
-                        <input type="checkbox" class="weekday">
-                        <span class="label">s</span>
-                        <span class="label">m</span>
-                        <span class="label">t</span>
-                        <span class="label">w</span>
-                        <span class="label">t</span>
-                        <span class="label">f</span>
-                        <span class="label">s</span>
-                    </div>
-                </div>
+            <div class="weekdays">
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <span class="label">s</span>
+              <span class="label">m</span>
+              <span class="label">t</span>
+              <span class="label">w</span>
+              <span class="label">t</span>
+              <span class="label">f</span>
+              <span class="label">s</span>
             </div>
-            
-            <br>
-            <br>
-            <br>
-            
-            <div id="special-calendars">
-                <label>Calendars to consider:</label>
-                <br>
-                <input type="radio" id="jewish-holidays" name="calendars" value="jewish-holidays">
-                <label for="jewish-holidays">Jewish Holidays</label>
-                <br>
-                <input type="radio" id="phases-of-moon" name="calendars" value="phases-of-moon">
-                <label for="phases-of-moon">Phases of the moon</label>
+          </div>
+
+          <div class="timeslot">
+            <button class="sub" id="remove-optimal-availability-slot">-</button>
+            <div class="time-range">
+              <input
+                class="small"
+                type="text"
+                id="start-time"
+                name="start-time"
+                value="10:00"
+              />
+              -
+              <input
+                class="small"
+                type="text"
+                id="end-time"
+                name="end-time"
+                value="4:00"
+              />
             </div>
-            
-        </main>
+            <div class="weekdays">
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" />
+              <span class="label">s</span>
+              <span class="label">m</span>
+              <span class="label">t</span>
+              <span class="label">w</span>
+              <span class="label">t</span>
+              <span class="label">f</span>
+              <span class="label">s</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="suboptimal-availabilities">
+          <h2>
+            Suboptimal Times:
+            <button class="add" id="add-suboptimal-availability-slot">+</button>
+          </h2>
+          <div class="timeslot">
+            <button class="sub" id="remove-optimal-availability-slot">-</button>
+            <div class="time-range">
+              <input
+                class="small"
+                type="text"
+                id="start-time"
+                name="start-time"
+                value="10:00"
+              />
+              -
+              <input
+                class="small"
+                type="text"
+                id="end-time"
+                name="end-time"
+                value="4:00"
+              />
+            </div>
+            <div class="weekdays">
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" />
+              <span class="label">s</span>
+              <span class="label">m</span>
+              <span class="label">t</span>
+              <span class="label">w</span>
+              <span class="label">t</span>
+              <span class="label">f</span>
+              <span class="label">s</span>
+            </div>
+          </div>
+
+          <div class="timeslot">
+            <button class="sub" id="remove-optimal-availability-slot">-</button>
+            <div class="time-range">
+              <input
+                class="small"
+                type="text"
+                id="start-time"
+                name="start-time"
+                value="10:00"
+              />
+              -
+              <input
+                class="small"
+                type="text"
+                id="end-time"
+                name="end-time"
+                value="4:00"
+              />
+            </div>
+            <div class="weekdays">
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
+              <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" />
+              <span class="label">s</span>
+              <span class="label">m</span>
+              <span class="label">t</span>
+              <span class="label">w</span>
+              <span class="label">t</span>
+              <span class="label">f</span>
+              <span class="label">s</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="special-calendars">
+          <label>Calendars to consider:</label>
+          <br />
+          <input type="checkbox" name="jewish-holidays" />
+          <label for="jewish-holidays">Jewish Holidays</label>
+          <br />
+          <input type="checkbox" name="phases-of-moon" />
+          <label for="phases-of-moon">Phases of the moon</label>
+        </div>
+      </main>
     </div>
-    </body>
-    </html>
+  </body>
+</html>
