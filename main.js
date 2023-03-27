@@ -1,7 +1,7 @@
-const timeslot = document.getElementById("timeslot");
+const timeslot = document.getElementById("optimal-availabilities");
 const addBtn = document.getElementById("add-timeslot");
 
-const timeslotSub = document.getElementById("subopt-timeslot");
+const timeslotSub = document.getElementById("suboptimal-availabilities");
 const addBtnSub = document.getElementById("add-subopt-timeslot");
 
 addBtn.addEventListener("click", function() {
