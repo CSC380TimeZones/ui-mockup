@@ -11,6 +11,7 @@
     />
     <title>Config UI</title>
     <link rel="stylesheet" href="./google-css-rules/style.css" />
+    <script defer src="main.js"></script>
     <style>
       /* THE FOLLOWING RULES ARE SIMPLY TO REPLICATE A SIMILAR ENVIRONMENT TO THE GOOGLE PLUGIN */
       body {
@@ -30,7 +31,7 @@
   <body>
     <div class="wrapper">
       <header style="text-align: center">
-        <h1>Meeting Configuration</h1>
+        <h1>Time Constrains</h1>
         <label for="time-zone">Timezone: </label>
         <select id="time-zone" name="time-zone">
           <option value="" selected disabled>Select time zone:</option>
@@ -71,14 +72,14 @@
           <h2>
             Preferred Times:<button
               class="add"
-              id="add-optimal-availability-slot"
+              id="add-timeslot"
             >
               +
             </button>
           </h2>
 
-          <div class="timeslot">
-            <button class="sub" id="remove-optimal-availability-slot">-</button>
+          <div class="timeslot" id = "timeslot">
+            <button class="sub" id="deleteBtn">-</button>
             <div class="time-range">
               <input
                 type="text"
@@ -114,32 +115,32 @@
             </div>
           </div>
 
-          <div class="timeslot">
-            <button class="sub" id="remove-optimal-availability-slot">-</button>
+          <div class="timeslot" id = "timeslot">
+            <button class="sub" id="deleteBtn">-</button>
             <div class="time-range">
               <input
-                class="small"
                 type="text"
+                class="small"
                 id="start-time"
                 name="start-time"
-                value="10:00"
+                value="9:00"
               />
               -
               <input
-                class="small"
                 type="text"
+                class="small"
                 id="end-time"
                 name="end-time"
-                value="4:00"
+                value="5:00"
               />
             </div>
             <div class="weekdays">
               <input type="checkbox" class="weekday" />
-              <input type="checkbox" class="weekday" />
               <input type="checkbox" class="weekday" checked />
               <input type="checkbox" class="weekday" />
               <input type="checkbox" class="weekday" checked />
               <input type="checkbox" class="weekday" />
+              <input type="checkbox" class="weekday" checked />
               <input type="checkbox" class="weekday" />
               <span class="label">s</span>
               <span class="label">m</span>
@@ -155,10 +156,11 @@
         <div id="suboptimal-availabilities">
           <h2>
             Suboptimal Times:
-            <button class="add" id="add-suboptimal-availability-slot">+</button>
+            <button class="add" id="add-subopt-timeslot">+</button>
           </h2>
-          <div class="timeslot">
-            <button class="sub" id="remove-optimal-availability-slot">-</button>
+
+          <div class="timeslot" id ="subopt-timeslot">
+            <button class="sub" id="deleteBtn">-</button>
             <div class="time-range">
               <input
                 class="small"
@@ -194,8 +196,8 @@
             </div>
           </div>
 
-          <div class="timeslot">
-            <button class="sub" id="remove-optimal-availability-slot">-</button>
+          <div class="timeslot" id ="subopt-timeslot">
+            <button class="sub" id="deleteBtn">-</button>
             <div class="time-range">
               <input
                 class="small"
