@@ -63,7 +63,7 @@
           <option value="GMT-1:00">GMT-1:00</option>
         </select>
         <a href="index.html" style="float: right"
-          ><button class="blue"><i class="fas fa-home"></i></button
+          ><button class="blue" onclick="saveSettings()"><i class="fas fa-home"></i></button
         ></a>
       </header>
 
@@ -237,11 +237,11 @@
         <div id="special-calendars">
           <label>Calendars to consider:</label>
           <br />
-          <input type="checkbox" name="jewish-holidays" />
-          <label for="jewish-holidays">Jewish Holidays</label>
+          <input type="checkbox" name="special-calendar" value="Jewish Holidays" />
+          <label for="special-calendar">Jewish Holidays</label>
           <br />
-          <input type="checkbox" name="phases-of-moon" />
-          <label for="phases-of-moon">Phases of the moon</label>
+          <input type="checkbox" name="special-calendar" value="Phases of the Moon" />
+          <label for="special-calendar">Phases of the moon</label>
         </div>
       </main>
     </div>

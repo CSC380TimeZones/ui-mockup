@@ -97,3 +97,34 @@ addBtnSub.addEventListener("click", function() {
   deleteBtn.addEventListener("click",
                              function() { timeslotSub.removeChild(weekdays); });
 });
+
+function findMeeting() {
+    var meetingLength = document.getElementById("meeting-length").value;
+    var emails = document.getElementById("participant-emails").value;
+    alert("Length: " + meetingLength + " minutes and emails are " + emails);
+}
+
+function saveSettings() {
+    // gets the value for timezone
+    var timezone = document.getElementById("time-zone").value;
+    alert("timezone = " + timezone);
+    
+    // gets the value for special calendars
+    var special_calendars = document.querySelectorAll('input[name="special-calendar"]');
+    var special_calendars_checked = [];
+    for (var i = 0; i < special_calendars.length; i++) {
+        if (special_calendars[i].checked) {
+          special_calendars_checked.push(special_calendars[i].value);
+        }
+      }
+
+      if (special_calendars_checked.length > 0) {
+        alert("You selected: " + special_calendars_checked.join(", "));
+      } else {
+        alert("You selected no calendar.");
+      }
+
+    //gets the optimal time values
+    
+
+}

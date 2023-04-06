@@ -27,6 +27,7 @@
         box-shadow: 0 0 5px black;
       }
     </style>
+    <script defer src="main.js"></script>
   </head>
 
   <body>
@@ -54,11 +55,11 @@
         <br><br>
         
         <label for="participant-emails">Participant email addresses:</label>
-        <input type="text" id="participant-emails" name="participant-emails">
+        <input type="email" id="participant-emails" name="emails" multiple>
         
         <br><br>
         
-        <button type="submit" id="find-meeting">Find a Meeting</button>
+        <button type="submit" id="find-meeting" onclick="findMeeting()">Find a Meeting</button>
       </main>
     </div>
   </body>
