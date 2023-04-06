@@ -4,6 +4,7 @@ const addBtn = document.getElementById("add-timeslot");
 const timeslotSub = document.getElementById("suboptimal-availabilities");
 const addBtnSub = document.getElementById("add-subopt-timeslot");
 
+// adds timeslots for optimal times
 addBtn.addEventListener("click", function() {
   const weekdays = document.createElement("div");
   weekdays.classList.add("timeslot");
@@ -51,6 +52,8 @@ addBtn.addEventListener("click", function() {
                              function() { timeslot.removeChild(weekdays); });
 });
 
+
+// adds timeslots for subtoptimal times
 addBtnSub.addEventListener("click", function() {
   const weekdays = document.createElement("div");
   weekdays.classList.add("timeslot");
@@ -98,12 +101,14 @@ addBtnSub.addEventListener("click", function() {
                              function() { timeslotSub.removeChild(weekdays); });
 });
 
+//triggers when the find meeting button is clicked in index.html
 function findMeeting() {
     var meetingLength = document.getElementById("meeting-length").value;
     var emails = document.getElementById("participant-emails").value;
     alert("Length: " + meetingLength + " minutes and emails are " + emails);
 }
 
+// triggers once the home button is clicked in configUI
 function saveSettings() {
     // gets the value for timezone
     var timezone = document.getElementById("time-zone").value;
@@ -128,3 +133,4 @@ function saveSettings() {
     
 
 }
+
